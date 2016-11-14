@@ -1,0 +1,22 @@
+<project default="build-package-common">
+	<include buildfile="_powerup\build\nant\common.build" />
+	<property name="solution.name" value="FizzBuzz" unless="${property::exists('solution.name')}" />
+	
+	<target name="build-myapp" depends="clean compile-solution run-unit-test package-project copy-build-files create-package-info zip-package"/>
+	
+	<target name="package-project">
+		<copy todir="${package.dir}\FizzBuzz" overwrite="true" flatten="false" includeemptydirs="true">
+			<fileset basedir="${solution.dir}\FizzBuzz\bin\Release">
+				<include name="**.*"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	
+	<target name="run-unit-test" descripton="running unit tests" >
+		<exec program="packages\NUnit.ConsoleRunner.3.5.0\tools\nunit3-console.exe">
+    		<arg line='"${solution.dir}\FizzBuzzlib.Test\bin\Release\FizzBuzzlib.Test.dll"' />
+    	</exec>
+	</target>
+	
+</project>
