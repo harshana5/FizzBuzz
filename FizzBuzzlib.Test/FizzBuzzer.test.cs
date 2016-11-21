@@ -36,7 +36,7 @@ namespace FizzBuzzlib.Test
         }
 
         [Test]
-        public void Buzzer_whenDev5_and_Dev3_returnFizzBuzz([Values (15) ]int input) {
+        public void Buzzer_whenDev5_and_Dev3_returnFizzBuzz([Values (15,30)] int input) {
 
 
             string output = fizzBuzzer.getValue(input);
