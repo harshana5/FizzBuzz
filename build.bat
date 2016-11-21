@@ -1,4 +1,4 @@
-.nuget\nuget.exe restore FizzBuzz.sln
+_nuget\nuget.exe restore FizzBuzz.sln
 
 call bootstrap.bat
 _powerup\build\nant\nant\bin\nant -D:solution.name=FizzBuzz %*
