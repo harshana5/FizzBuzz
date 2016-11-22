@@ -10,6 +10,16 @@
 				<include name="**.*"/>
 			</fileset>
 		</copy>
+		<copy todir="${package.dir}\FizzBuzz" overwrite="true" flatten="false" includeemptydirs="true">
+			<fileset basedir="${solution.dir}\FizzBuzzlib.Test\bin\Release">
+				<include name="**.*"/>
+			</fileset>
+		</copy>
+		<copy todir="${package.dir}\FizzBuzz" overwrite="true" flatten="false" includeemptydirs="true">
+			<fileset basedir="${solution.dir}">
+				<include name="RunIntegrationTest.bat"/>
+			</fileset>
+		</copy>		
 	</target>
 	
 	

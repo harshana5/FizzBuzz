@@ -1,0 +1,1 @@
+nunit3-console FizzBuzzlib.Test.dll
