@@ -42,5 +42,13 @@ namespace FizzBuzzlib.Test
             string output = fizzBuzzer.getValue(input);
             Assert.AreEqual("FizzBuzz", output);    
         }
+
+        [Test]
+        public void DummyTest([Range(0, 30)] int input)
+        {
+
+            Assert.Pass();
+           
+        }
     }
 }
